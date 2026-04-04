@@ -75,4 +75,4 @@ with gr.Blocks() as demo:
     btn = gr.Button("Отправить")
     btn.click(submit_and_poll, inputs=text, outputs=out)
 
-demo.launch()
+demo.launch(server_name=settings.host, server_port=settings.port)
