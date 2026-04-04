@@ -1,0 +1,28 @@
+[project]
+name = "emotion-classification-service"
+version = "0.1.0"
+description = "ML service for classifying emotions in text"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "transformers",
+    "fastapi",
+    "uvicorn",
+    "torch",
+    "loguru",
+    "datasets",
+    "httpx",
+    "celery",
+    "pydantic-settings",
+    "flower",
+    "redis",
+    "scikit-learn>=1.8.0",
+    "joblib>=1.5.3",
+    "matplotlib>=3.10.8",
+    "pandas>=3.0.1",
+    "gradio>=6.11.0",
+]
+
+[dependency-groups]
+lint = [
+    "ruff>=0.15.6",
+]

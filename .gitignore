@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv
+venv
+
+# Environment
+.env
+
+# Data
+data/train.csv
+data/test.csv
+hf_cache/
+.gradio/
+
+# Train artifacts
+train/
+!train/*.py
