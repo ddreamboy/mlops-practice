@@ -75,11 +75,17 @@ class CelerySettings(BaseSettings):
 
 
 class GradioSettings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", extra="ignore"
+    )
+
     api_base_url: str = "http://localhost:8000"
     poll_interval_seconds: float = 1.0
     poll_timeout_seconds: float = 30.0
     host: str = "0.0.0.0"
     port: int = 7860
+    clearml_serving_url: str = "http://localhost:8009/serve/emotion-classifier"
+    clearml_serving_version: str = "2"
 
 
 class ClearMLSettings(BaseSettings):
