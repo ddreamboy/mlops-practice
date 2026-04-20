@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import matplotlib.pyplot as plt  # noqa: F401
 import pandas as pd
 from clearml import Dataset, OutputModel, Task
 from sklearn.feature_extraction.text import TfidfVectorizer
