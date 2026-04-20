@@ -17,7 +17,8 @@ def load_data(path) -> tuple[list[str], list[str]]:
 
 def main():
     task: Task = Task.init(
-        project_name="emotion-classification", task_name="train_model"
+        project_name="emotion-classification",
+        task_name="model-training",
     )
     task_logger = task.get_logger()
 
@@ -77,7 +78,9 @@ def main():
     task_logger.report_matplotlib_figure("Confusion Matrix", "val", cm.figure_)
 
     joblib.dump(pipeline, "model.pkl")
-    OutputModel(task=task).update_weights("model.pkl")
+    OutputModel(task=task, name="emotion-classification-model").update_weights(
+        "model.pkl"
+    )
 
 
 if __name__ == "__main__":
