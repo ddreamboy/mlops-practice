@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import joblib  # noqa: F401
+import joblib
 import matplotlib.pyplot as plt  # noqa: F401
 import pandas as pd
 from clearml import Dataset, OutputModel, Task
@@ -76,7 +76,8 @@ def main():
     cm = ConfusionMatrixDisplay.from_predictions(y_test, y_pred)
     task_logger.report_matplotlib_figure("Confusion Matrix", "val", cm.figure_)
 
-    OutputModel(task=task).update_weights(pipeline)
+    joblib.dump(pipeline, "model.pkl")
+    OutputModel(task=task).update_weights("model.pkl")
 
 
 if __name__ == "__main__":
