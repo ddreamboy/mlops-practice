@@ -96,3 +96,4 @@ class ClearMLSettings(BaseSettings):
     CLEARML_API_SECRET_KEY: str
 
     dataset_id: str | None = None
+    queue_name: str = "default"
