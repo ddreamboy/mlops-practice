@@ -80,3 +80,19 @@ class GradioSettings(BaseSettings):
     poll_timeout_seconds: float = 30.0
     host: str = "0.0.0.0"
     port: int = 7860
+
+
+class ClearMLSettings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
+
+    CLEARML_WEB_HOST: str
+    CLEARML_API_HOST: str
+    CLEARML_FILES_HOST: str
+    CLEARML_API_ACCESS_KEY: str
+    CLEARML_API_SECRET_KEY: str
+
+    dataset_id: str | None = None

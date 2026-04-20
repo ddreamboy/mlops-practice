@@ -20,6 +20,7 @@ dependencies = [
     "matplotlib>=3.10.8",
     "pandas>=3.0.1",
     "gradio>=6.11.0",
+    "clearml>=2.1.5",
 ]
 
 [dependency-groups]
