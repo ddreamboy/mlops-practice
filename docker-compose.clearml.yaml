@@ -196,7 +196,7 @@ services:
       CLEARML_FILES_HOST: ${CLEARML_FILES_HOST}
       CLEARML_API_ACCESS_KEY: ${CLEARML_API_ACCESS_KEY}                                                          
       CLEARML_API_SECRET_KEY: ${CLEARML_API_SECRET_KEY}   
-      CLEARML_SERVING_TASK_ID: a13bdcb633584dcfbaf279836e9c34d5
+      CLEARML_SERVING_TASK_ID: ${CLEARML_SERVING_TASK_ID}
       CLEARML_EXTRA_PYTHON_PACKAGES: "scikit-learn==1.8.0"                                                  
     networks:                                             
       - backend                                                                                                  
