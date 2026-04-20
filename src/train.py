@@ -20,6 +20,7 @@ def main():
         project_name="emotion-classification",
         task_name="model-training",
     )
+    task.output_uri = "https://files.clearml.media-tracking.ru"
     task_logger = task.get_logger()
 
     params = task.connect(
