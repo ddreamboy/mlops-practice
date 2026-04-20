@@ -21,6 +21,7 @@ dependencies = [
     "pandas>=3.0.1",
     "gradio>=6.11.0",
     "clearml>=2.1.5",
+    "clearml-agent>=2.0.7",
 ]
 
 [dependency-groups]
