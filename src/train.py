@@ -31,7 +31,7 @@ def main():
         }
     )
 
-    task.execute_remotely(queue_name="students")
+    task.execute_remotely(queue_name="course-queue")
 
     dataset = Dataset.get(dataset_id=params["DATASET_ID"])
     dataset_path = Path(dataset.get_local_copy())
